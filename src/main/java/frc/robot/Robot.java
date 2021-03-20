@@ -105,7 +105,7 @@ public class Robot extends TimedRobot implements RobotMap, ControMap {
         break;
       case kDefaultAuto:
         Chassis.driveDist(dist, 0.05, 0.04, 0.25, false);
-      //  Chassis.turnToAngle(angl, 0.005, 0.5, 0.25, false);
+        Chassis.turnToAngle(angl, 0.005, 0.5, 0.25, false);
         break;
       case kResetPIDs:
         break;

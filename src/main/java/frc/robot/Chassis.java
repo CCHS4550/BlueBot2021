@@ -102,8 +102,6 @@ public class Chassis implements RobotMap{
         double rError = goal-rPos;
         double rSpd = 0; 
 
-        double spd = 0; 
-
         while(true){
             lPos = getLDist();
             lError = goal-lPos;
@@ -115,9 +113,7 @@ public class Chassis implements RobotMap{
             rSpd = rError*kp;
             rSpd = OI.normalize(rSpd, -max, max);
 
-            spd = (rSpd+lSpd)/2;
-
-            driveSpd(spd, spd);
+            driveSpd(lSpd, rSpd);
 
             if(debug){
                 System.out.println("Left - Left Speed: " + lSpd + 
